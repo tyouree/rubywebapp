@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title><%= full_title(yield(:title)) %></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <!--[if lt IE 9]
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+  [endif]-->
+</head>
+<body>
+  <%= render 'layouts/head' %>
+
+  <div class="container">
+    <div class="navi_bar">
+      <%= render 'layouts/navi' %>
+      <%= render 'layouts/subnavi' %>
+    </div><br>
+
+    <% flash.each do |message_type, message| %>
+      <div class="alert alert-<%= message_type %>"><%= html_statement(message) %></div>
+    <% end %>
+
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="navi_bar">
+      <%= render 'layouts/subnavi' %>
+    </div>
+
+    <br>
+    <%= render 'layouts/footer' %>
+
+  </div>
+
+  <br>
+  <br>
+  <div class="container">
+    <%= debug(params) if Rails.env.development? %>
+  </div>
+</body>
+</html>
