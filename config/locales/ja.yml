@@ -1,0 +1,10 @@
+ja:
+  err_messages:
+    1001: 'MESSAGE_CODE_1001_ログインください。'
+    1002: 'MESSAGE_CODE_1002_ログインください。'
+    1003: 'MESSAGE_CODE_1003_ログインください。'
+  controllers:
+    login:
+      login_in: 'ログインください。'
+  views:
+    common:

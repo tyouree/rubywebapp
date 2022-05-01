@@ -1,0 +1,16 @@
+<h1>LOGIN　VIEW</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:login, url: login_path) do |f| %>
+
+      <%= f.label :user_id, t('views.login_view.user_id') %>
+      <%= f.text_field :user_id, value: @user_id, class: 'form-control', maxlength: 16 %>
+      <br><br>
+      <%= f.label :password, t('views.login_view.user_passwd') %>
+      <%= f.password_field :password, class: 'form-control', maxlength: 16 %>
+      <br><br>
+      <%= f.submit "登録", class: "btn btn-primary w-25" %>
+    <% end %>
+  </div>
+</div>

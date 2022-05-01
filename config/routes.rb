@@ -4,9 +4,13 @@ Rails.application.routes.draw do
   #
   #
 
+  root 'menu_index#index'
 
-  # main menu route
   get '/menu_index' , to: 'menu_index#index'
 
-  root 'menu_index#index'
+  get    '/login',   to: 'login#new'
+  post   '/login',   to: 'login#auth'
+  get   '/index',   to: 'login#index'
+  delete '/logout',  to: 'login#destroy'
+
 end
