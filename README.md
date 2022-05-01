@@ -15,6 +15,9 @@ Docker + NGINX + Rails + PostgreSQL + PGAdmin + Webpack + vue.js + Bootstrap
 
 ## rubywebapp
 http://localhost/
+ログインユーザー
+ID:amdin1
+PW:amdin
 
 ## pgAdmin4
 http://localhost:10000
